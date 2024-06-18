@@ -25,4 +25,4 @@ add_executable(Personaje main.cpp PersonajeVideojuego.h PersonajeVideojuego.cpp 
         CuracionHabilidad.h
         CuracionHabilidad.cpp
         ConfiguracionesJuego.h
-        ConfiguracionesJuego.cpp)
+        ConfiguracionesJuego.cpp Personaje.h Personaje.cpp Item.h Item.cpp Pocion.h Pocion.cpp Arma.h Arma.cpp)

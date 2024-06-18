@@ -5,7 +5,9 @@
 #ifndef PERSONAJE_JUGADOR_H
 #define PERSONAJE_JUGADOR_H
 
+#include <vector>
 #include "Entidad.h"
+#include "Habilidad.h"
 
 class Jugador : public Entidad {
 public:
@@ -20,6 +22,7 @@ private:
 
     std::string nombreNew;
     int vidaNew;
+
 };
 
 
