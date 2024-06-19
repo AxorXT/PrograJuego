@@ -7,13 +7,15 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include "Habilidad.h"
 
 class PersonajeVideojuego {
 public:
 
     PersonajeVideojuego(); //Constructor default
-    PersonajeVideojuego(int fuerza, int vida, std::string ataque, std::string nombre); //Constructor Parametros
-    virtual ~PersonajeVideojuego() = default; //Destructor
+    PersonajeVideojuego(int fuerza, int vida, std::string ataque, std::string nombre, std::vector<Habilidad *> nHabilidades); //Constructor Parametros
+    virtual ~PersonajeVideojuego(); //Destructor
 
     virtual void crearAtaque();
 
@@ -29,6 +31,8 @@ public:
     std::string getNombre() const;
     void setNombre(std::string nombre);
 
+    void mostrarHabilidad();
+    void agregarHabilidad(Habilidad *habilidad);
 
 private:
 
@@ -36,6 +40,8 @@ private:
     std::string nombre;
     int fuerza;
     int vida;
+
+    std::vector<Habilidad *> nHabilidades;
 };
 
 

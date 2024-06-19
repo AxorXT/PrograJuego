@@ -7,7 +7,7 @@
 Habilidad::Habilidad() {}
 
 Habilidad::~Habilidad() {
-    std::cout << "La habilidad desaparecio";
+    std::cout << "La habilidad desaparecio" << std::endl;
 }
 
-void Habilidad::usar() {}
+void Habilidad::usarHabilidad() {}

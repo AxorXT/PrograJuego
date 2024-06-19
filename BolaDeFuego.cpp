@@ -7,9 +7,9 @@
 BolaDeFuego::BolaDeFuego() {}
 
 BolaDeFuego::~BolaDeFuego() {
-    std::cout << "No sirve el ataque";
+    std::cout << "No sirve el ataque" << std::endl;
 }
 
-void BolaDeFuego::usar() {
+void BolaDeFuego::usarHabilidad() {
     std::cout << "Has utilizado la Bola De Fuego" << std::endl;
 }

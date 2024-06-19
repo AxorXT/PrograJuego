@@ -4,12 +4,27 @@
 
 #include "Pocion.h"
 
-Pocion::Pocion() {}
+Pocion::Pocion() {
+    danoObjeto = 0;
+}
+
+Pocion::Pocion(std::string nombre, int danoObjeto) : Item(nombre) {
+    this -> danoObjeto = danoObjeto;
+}
 
 Pocion::~Pocion() {
-    std::cout << "No funciono la Pocion";
+    std::cout << "No funciono la Pocion" << std::endl;
 }
 
 void Pocion::usar() {
-    std::cout << "Has utilizado la pocion" << std::endl;
+    std::cout << getNombre() << " utilizada" << " +" << danoObjeto << std::endl;
+    delete this;
+}
+
+int Pocion::getDanoObjeto() const{
+    return danoObjeto;
+}
+
+void Pocion::setDanoObjeto(int danoObjeto) {
+    this -> danoObjeto = danoObjeto;
 }

@@ -11,9 +11,17 @@ class Arma : public Item {
 public:
 
     Arma();
+    Arma(std::string nombre, int danoObjeto);
     ~Arma();
 
     void usar() override;
+
+    int getDanoObjeto() const;
+    void setDanoObjeto(int danoObjeto);
+
+private:
+
+    int danoObjeto;
 
 };
 

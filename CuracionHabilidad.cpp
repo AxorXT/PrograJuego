@@ -8,6 +8,6 @@ CuracionHabilidad::CuracionHabilidad() {}
 
 CuracionHabilidad::~CuracionHabilidad() {}
 
-void CuracionHabilidad::usar() {
+void CuracionHabilidad::usarHabilidad() {
     std::cout << "Te has curado correctamente" << std::endl;
 }

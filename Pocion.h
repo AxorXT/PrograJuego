@@ -11,9 +11,17 @@ class Pocion : public Item {
 public:
 
     Pocion();
+    Pocion(std::string nombre, int danoObjeto);
     ~Pocion();
 
     void usar() override;
+
+    int getDanoObjeto() const;
+    void setDanoObjeto(int danoObjeto);
+
+private:
+
+    int danoObjeto;
 
 };
 

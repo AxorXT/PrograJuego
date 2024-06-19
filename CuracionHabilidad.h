@@ -13,7 +13,7 @@ public:
     CuracionHabilidad();
     ~CuracionHabilidad();
 
-    void usar() override;
+    void usarHabilidad() override;
 
 };
 

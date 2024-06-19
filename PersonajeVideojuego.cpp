@@ -12,15 +12,22 @@ PersonajeVideojuego::PersonajeVideojuego() {
 
 }
 
-PersonajeVideojuego::PersonajeVideojuego(int fuerza, int vida, std::string ataque, std::string nombre) {
+PersonajeVideojuego::PersonajeVideojuego(int fuerza, int vida, std::string ataque, std::string nombre, std::vector<Habilidad *> nHabilidades) {
     this -> fuerza = fuerza;
     this -> vida = vida;
     this -> ataque = ataque;
     this -> nombre = nombre;
+    this -> nHabilidades = nHabilidades;
+}
+
+PersonajeVideojuego::~PersonajeVideojuego(){
+    std::cout << "Personaje exploto" << std::endl;
 }
 
 
-void PersonajeVideojuego::crearAtaque() {}
+void PersonajeVideojuego::crearAtaque() {
+    std::cout << "Golpe" << std::endl;
+}
 
 int PersonajeVideojuego::getFuerza() const {
     return fuerza;
@@ -43,7 +50,6 @@ std::string PersonajeVideojuego::getAtaque() const {
 }
 
 void PersonajeVideojuego::setAtaque(std::string ataque) {
-    std::cout << "Ataque principal: " << ataque << std::endl;
     this -> ataque = ataque;
 }
 
@@ -52,6 +58,15 @@ std::string PersonajeVideojuego::getNombre() const {
 }
 
 void PersonajeVideojuego::setNombre(std::string nombre)  {
-    std::cout << "Nombre de Jugador: " << nombre << std::endl;
     this -> nombre = nombre;
+}
+
+void PersonajeVideojuego::mostrarHabilidad() {
+    for(Habilidad* habilidad : nHabilidades){
+        habilidad->usarHabilidad();
+    }
+}
+
+void PersonajeVideojuego::agregarHabilidad(Habilidad* habilidad) {
+    nHabilidades.push_back(habilidad);
 }

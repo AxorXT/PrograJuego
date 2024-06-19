@@ -9,13 +9,13 @@ Guerrero::Guerrero() {
     this -> Armadura ="N/A";
 }
 
-Guerrero::Guerrero(std::string Arma, std::string Armadura) {
+Guerrero::Guerrero(int fuerza, int vida, std::string ataque, std::string nombre,std::vector<Habilidad *> nHabilidades, std::string Arma, std::string Armadura) : PersonajeVideojuego(fuerza, vida, ataque, nombre, nHabilidades), Inventario(){
     this -> Arma = Arma;
     this -> Armadura = Armadura;
 }
 
 Guerrero::~Guerrero(){
-    //Destructor
+    std::cout << "exploto guerrero" << std::endl;
 }
 
 void Guerrero::crearAtaque() {

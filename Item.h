@@ -11,9 +11,16 @@ class Item {
 public:
 
     Item();
-    ~Item();
+    Item(std::string nombre);
+    virtual ~Item();
+
+    std::string getNombre() const;
+    void setNombre(std::string nombre);
 
     virtual void usar();
+
+private:
+    std::string nombre;
 
 };
 

@@ -8,6 +8,7 @@
 #include "Enemigo.h"
 
 class Duende : public Enemigo {
+public:
 
     Duende();
     Duende(float altura, std::string armaPrincipal);

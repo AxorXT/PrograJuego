@@ -13,7 +13,7 @@ public:
     Habilidad();
     ~Habilidad();
 
-    virtual void usar();
+    virtual void usarHabilidad();
 
 };
 

@@ -5,12 +5,12 @@
 #include "ConfiguracionesJuego.h"
 
 ConfiguracionesJuego::ConfiguracionesJuego() {
-    this -> resolucion = "N/A";
-    this -> dificultad = "N/A";
-    this -> volumen = 0;
+    this -> resolucion = 720;
+    this -> dificultad = "Medio";
+    this -> volumen = 87;
 }
 
-ConfiguracionesJuego::ConfiguracionesJuego(std::string resolucion, std::string dificultad, int volumen) {
+ConfiguracionesJuego::ConfiguracionesJuego(int resolucion, std::string dificultad, int volumen) {
     this -> resolucion = resolucion;
     this -> dificultad = dificultad;
     this -> volumen = volumen;
@@ -18,14 +18,32 @@ ConfiguracionesJuego::ConfiguracionesJuego(std::string resolucion, std::string d
 
 ConfiguracionesJuego::~ConfiguracionesJuego() {}
 
-std::string ConfiguracionesJuego::getResolucion() const {}
+int ConfiguracionesJuego::getResolucion() const {
+    return resolucion;
+}
 
-void ConfiguracionesJuego::setResolucion(std::string resolucion) {}
+void ConfiguracionesJuego::setResolucion(int resolucion) {
+    this -> resolucion = resolucion;
+}
 
-std::string ConfiguracionesJuego::getDificultad() const {}
+std::string ConfiguracionesJuego::getDificultad() const {
+    return dificultad;
+}
 
-void ConfiguracionesJuego::setDificultad(std::string dificultad) {}
+void ConfiguracionesJuego::setDificultad(std::string dificultad) {
+    this -> dificultad = dificultad;
+}
 
-int ConfiguracionesJuego::getVolumen() const {}
+int ConfiguracionesJuego::getVolumen() const {
+    return volumen;
+}
 
-void ConfiguracionesJuego::setVolumen(int volumen) {}
+void ConfiguracionesJuego::setVolumen(int volumen) {
+    this -> volumen = volumen;
+}
+
+void ConfiguracionesJuego::mostrarConf() {
+    std::cout << "Resolucion: " << resolucion << std::endl;
+    std::cout << "Volumen: " << volumen << std::endl;
+    std::cout << "Dificultad: " << dificultad << std::endl;
+}

@@ -4,17 +4,19 @@
 
 #include "Mago.h"
 
-Mago::Mago() {
+Mago::Mago() : PersonajeVideojuego(), Inventario(){
     this -> hechizoTop = "N/A";
     this -> Tipo ="N/A";
 }
 
-Mago::Mago(std::string hechizoTop, std::string Tipo) {
+Mago::Mago(int fuerza, int vida, std::string ataque, std::string nombre, std::vector<Habilidad *> nHabilidades, std::string hechizoTop, std::string Tipo) : PersonajeVideojuego(fuerza, vida, ataque, nombre, nHabilidades), Inventario(){
     this -> hechizoTop = hechizoTop;
     this -> Tipo = Tipo;
 }
 
-Mago::~Mago() {}
+Mago::~Mago() {
+    std::cout << "Exploto el mago" << std::endl;
+}
 
 void Mago::crearAtaque() {
     std::cout << "Hechizo de Hielo" << std::endl;

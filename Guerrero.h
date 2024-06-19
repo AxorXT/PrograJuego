@@ -12,7 +12,7 @@ class Guerrero : public PersonajeVideojuego, public Inventario {
 public:
 
     Guerrero(); //Constructor default
-    Guerrero (std::string Arma, std::string Armadura); //Constructor parametros
+    Guerrero (int fuerza, int vida, std::string ataque, std::string nombre, std::vector<Habilidad *> nHabilidades, std::string Arma, std::string Armadura); //Constructor parametros
     ~Guerrero(); //Destructor
 
     void crearAtaque() override;
@@ -24,6 +24,12 @@ public:
     void setArmadura(std::string Armadura);
 
 private:
+
+    std::string ataque;
+    std::string nombre;
+    int fuerza;
+    int vida;
+
     std::string Arma;
     std::string Armadura;
 

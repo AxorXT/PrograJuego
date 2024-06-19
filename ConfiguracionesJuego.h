@@ -12,11 +12,11 @@ class ConfiguracionesJuego {
 public:
 
     ConfiguracionesJuego();
-    ConfiguracionesJuego(std::string resolucion, std::string dificultad, int volumen);
+    ConfiguracionesJuego(int resolucion, std::string dificultad, int volumen);
     ~ConfiguracionesJuego();
 
-    std::string getResolucion() const;
-    void setResolucion(std::string resolucion);
+    int getResolucion() const;
+    void setResolucion(int resolucion);
 
     std::string getDificultad() const;
     void setDificultad(std::string dificultad);
@@ -24,9 +24,11 @@ public:
     int getVolumen() const;
     void setVolumen(int volumen);
 
+    void mostrarConf();
+
 private:
 
-    std::string resolucion;
+    int resolucion;
     std::string dificultad;
     int volumen;
 

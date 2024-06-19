@@ -13,7 +13,7 @@ public:
     BolaDeFuego();
     ~BolaDeFuego();
 
-    void usar() override;
+    void usarHabilidad() override;
 
 };
 

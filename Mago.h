@@ -12,7 +12,7 @@ class Mago : public PersonajeVideojuego, public Inventario {
 public:
 
     Mago(); //Constructor default
-    Mago(std::string hechizoTop, std::string Tipo); //Constructor parametros
+    Mago(int fuerza, int vida, std::string ataque, std::string nombre, std::vector<Habilidad *> nHabilidades, std::string hechizoTop, std::string Tipo); //Constructor parametros
     ~Mago(); //Destructor
 
     void crearAtaque() override;
@@ -26,6 +26,11 @@ public:
 
 
 private:
+    int fuerza;
+    int vida;
+    std::string ataque;
+    std::string nombre;
+
     std::string hechizoTop;
     std::string Tipo;
 

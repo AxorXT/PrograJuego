@@ -4,10 +4,26 @@
 
 #include "Item.h"
 
-Item::Item() {}
-
-Item::~Item() {
-    std::cout << "No funciona el Item";
+Item::Item() {
+    this -> nombre = "N/A";
 }
 
-void Item::usar() {}
+Item::Item(std::string nombre) {
+    this -> nombre = nombre;
+}
+
+Item::~Item() {
+    std::cout << " Eliminado" << std::endl;
+}
+
+void Item::usar() {
+    std::cout << nombre << "utilizado" << std::endl;
+}
+
+std::string Item::getNombre() const {
+    return nombre;
+}
+
+void Item::setNombre(std::string nombre) {
+    this -> nombre = nombre;
+}
